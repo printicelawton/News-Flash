@@ -110,3 +110,7 @@ form {
   flex-direction: column;
   align-items: center;
 }
+
+.your-news {
+  border: black 10px;
+}
