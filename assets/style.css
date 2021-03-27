@@ -1,0 +1,116 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Gotham Rounded", sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, rgb(155, 30, 26), rgb(255, 243, 173));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 50%;
+  width: 1200px;
+  background-color: rgb(163, 37, 37);
+  box-shadow: 0 5px 10px black;
+  border-radius: 5px;
+}
+
+.content {
+  padding: 40px;
+  margin-top: 50px;
+}
+
+.header {
+  color: rgb(239, 243, 30);
+  font-size: 60px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+h1 {
+  font-size: 80px;
+}
+
+.selections {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+.selections-container {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.selections {
+  display: inline-block;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px;
+}
+
+.row:after {
+  display: flex;
+  display: table;
+  clear: both;
+}
+
+.gold-border {
+  background-color: white;
+  width: 60%%;
+  align-items: center;
+  border: 10px gold solid;
+}
+
+.parent-container {
+  display: grid;
+  grid-template-areas:
+    "top-flash your-news your-news"
+    "top-flash your-sports your-sports";
+  grid-gap: 10px;
+}
+
+.top-flash {
+  grid-area: top-flash;
+  border: 30px;
+}
+
+.your-news {
+  grid-area: your-news;
+}
+
+.your-sports {
+  grid-area: your-sports;
+}
+
+form {
+  margin: 2px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.your-news {
+  border: black 10px;
+}
