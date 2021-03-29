@@ -1,17 +1,52 @@
 
-var categoryChoice = document.getElementById("category");
+
 var submitBtn = document.getElementById("submit");
 
 
 var nyTimesAPIKey = "VqGXtQf3PtyfZrtXwxjc54VEnZhc9QnR"
 var newsAPIKey = "850cb5d6549542ee848e80d5d1910b21"
 
+// window.addEventListener("load", function(event) {
+//     event.preventDefault();
+//     console.log("page is fully loaded");
+//     nyTimesTopStoriesAPI();
+// ;
+
+
+var checkBox = $("input[name='category']");
+    var categoryValue = '';
+    $('input').on('click', function() {
+    
+    if (checkBox.is(':checked')) {
+      $("input[name='category']:checked").each ( function() {
+        categoryValue= $(this).val();
+        // categoryValue = categoryValue.slice(0, -1);
+ 	  });
+       
+       console.log( $(this).val() ); // return all values of checkboxes checked
+    //    console.log(chkId); // return value of checkbox checked
+    }     
+  });
+
 
 
 function nyTimesTopStoriesAPI() {
-    var categoryValue = categoryChoice.options[categoryChoice.selectedIndex].value;
+
+    
+    // var categoryValue = document.querySelectorAll(".category").checked;
+    
+
+    // const categoryCheckbox = document.querySelectorAll("input[name=category]:checked");
+    // const categoryValue = categoryCheckbox.value;
+    
+    // console.log(categoryValue);
+    
+    // categoryChoice.options[categoryChoice.selectedIndex].value;
+
     var requestTopStories = "https://api.nytimes.com/svc/topstories/v2/" + categoryValue + ".json?api-key=" + nyTimesAPIKey;
-    console.log(categoryChoice.options[categoryChoice.selectedIndex].value);
+
+
+    // console.log(categoryChoice.options[categoryChoice.selectedIndex].value);
 
     fetch(requestTopStories)
     .then(function (response) {
@@ -19,27 +54,33 @@ function nyTimesTopStoriesAPI() {
     })
     .then(function (data) {
         console.log(data);
-    })
-
-    // Lines 25-38 are attempts at using API data.  The commented out lines don't work.  Let's find out why. JDR 
-    // newsImg1 = data.results[0].multimedia[0].url;
-    newsImg1 = "https://static01.nyt.com/images/2021/03/25/us/25atlanta/merlin_185529159_9ecc9cfa-7fe2-40c9-8258-c449f6039d0d-superJumbo.jpg"
-    console.log(newsImg1);
-    showNewsImg1.setAttribute('src', newsImg1);
-
-    // newsHeadline1 = data.results[0].title;
-    newsHeadline1 = "A Heavily Armed Man at a Grocery Store Adds to Anxiety in Atlanta"
-    console.log(newsHeadline1);
-    showNewsHeadline1.textContent = newsHeadline1;
-
-    // newsLink1 = data.results[0].short_url;
-    newsLink1 = "https://nyti.ms/39gJA0K";
-    console.log(newsLink1);
-    showNewsLink1.textContent = newsLink1;
+    });
 }
 
-submitBtn.addEventListener("click", function() {
+
+
+function newscatcherAPI() { 
+    fetch("https://newscatcher.p.rapidapi.com/v1/search_free?q=" + categoryValue + "&lang=en&media=True", {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-key": "4e65fa5d1fmshf86108e25761865p159b69jsn4aa46650c5be",
+		"x-rapidapi-host": "newscatcher.p.rapidapi.com"
+	}
+})
+.then(response => {
+	console.log(response);
+})
+.catch(err => {
+	console.error(err);
+});
+
+}
+
+
+submitBtn.addEventListener("click", function(event) {
     event.preventDefault();
-    nyTimesTopStoriesAPI();
+    // nyTimesTopStoriesAPI();
+    newscatcherAPI();
     console.log("ive been clicked 1");
+    // window.location = "newspage.html"
 })
