@@ -57,9 +57,30 @@ function nyTimesTopStoriesAPI() {
     });
 }
 
+
+
+function newscatcherAPI() { 
+    fetch("https://newscatcher.p.rapidapi.com/v1/search_free?q=" + categoryValue + "&lang=en&media=True", {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-key": "4e65fa5d1fmshf86108e25761865p159b69jsn4aa46650c5be",
+		"x-rapidapi-host": "newscatcher.p.rapidapi.com"
+	}
+})
+.then(response => {
+	console.log(response);
+})
+.catch(err => {
+	console.error(err);
+});
+
+}
+
+
 submitBtn.addEventListener("click", function(event) {
     event.preventDefault();
-    nyTimesTopStoriesAPI();
+    // nyTimesTopStoriesAPI();
+    newscatcherAPI();
     console.log("ive been clicked 1");
     // window.location = "newspage.html"
 })
