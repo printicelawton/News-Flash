@@ -1,5 +1,3 @@
-// var submitBtn = document.getElementById('submit');
-
 var news = document.getElementById("top-flash")
 var categoryChoice = document.getElementById("category");
 var nyTimesAPIKey = 'VqGXtQf3PtyfZrtXwxjc54VEnZhc9QnR';
@@ -47,12 +45,10 @@ var newsAPIKey = '850cb5d6549542ee848e80d5d1910b21';
 //     });
 // }    
 
-
+var index = 0
 
 function newscatcherAPI() { 
-    
     var categoryValue = categoryChoice.options[categoryChoice.selectedIndex].value;
-    var requestTopStories = "https://api.nytimes.com/svc/topstories/v2/" + categoryValue + ".json?api-key=" + nyTimesAPIKey;
     console.log(categoryChoice.options[categoryChoice.selectedIndex].value);
     fetch("https://newscatcher.p.rapidapi.com/v1/search_free?q=" + categoryValue + "&lang=en&media=True", {
     "method": "GET",
@@ -65,10 +61,10 @@ function newscatcherAPI() {
     .then(response => {
         console.log(response);
         const newsPhoto = document.getElementById("top-flash-photo");
-            newsPhoto.setAttribute("src", response.articles[0].media);
+            newsPhoto.setAttribute("src", response.articles[index].media);
             news.append(newsPhoto);
         const newsHeadline = document.getElementById("top-flash-headline");
-                    newsHeadline.innerHTML = response.articles[0].title;
+                    newsHeadline.innerHTML = response.articles[index].title;
                     news.append(newsHeadline);
     })
     .catch(err => {
@@ -83,6 +79,7 @@ $('#submit').click(function (event) {
     $('main').hide();
     // call the function to load the stories
     newscatcherAPI();
+    index++;
 });
 
 // submitBtn.addEventListener('click', function (event) {
