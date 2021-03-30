@@ -1,20 +1,18 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  /* font-family: "Gotham Rounded", sans-serif; */
+body {
+  background-color: #80202B;
+  color: #4a4a4a;
 }
 
-body {
-  /* background: linear-gradient(to right, rgb(155, 30, 26), rgb(255, 243, 173)); */
-  background-color: white;
-  color: #4a4a4a;
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-items: center; */
-  /* min-height: 50vh; */
-  /* margin: 0; */
-  /* padding: 0; */
+h1 {
+  display: inline-flex;
+  background-color: #80202B;
+    color: #E6e27b;
+    font-family: 'Krungthep', sans-serif;
+    font-size: 7rem;
+    margin: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 }
 
 .container {
@@ -23,130 +21,61 @@ body {
   align-items: center;
   max-width: 50%;
   width: 60rem;
-  background-color: #80202B;
+  background-color: white;
   box-shadow: 0 5px 10px black;
+  border: #E6e27b solid 1rem;
   border-radius: 5px;
   padding: 5rem;
 }
 
-/* .content {
-  padding: 40px;
-  margin-top: 50px;
-} */
-
-.header {
+form {
+  padding: .75rem;
+  background-color: #80202B;
   color: #E6e27b;
   font-family: 'Krungthep', sans-serif;
-  font-size: 5rem;
-  margin: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  justify-items: center;
+  box-shadow: 0 5px 10px black;
 }
 
-/* h1 {
-  font-size: 20rem;
-} */
-
-h2, h3 {
-  font-family: 'Krungthep', sans-serif;
-}
-
-h5 {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-weight: 600;
-}
-
-p {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-.selections {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 10px;
-}
-
-.selections-container {
-  font-size: 3rem;
-  font-weight: bold;
-}
-
-.selections {
-  display: inline-block;
-}
-
-.btn-submit {
-  background-color: #E6e27b;
-  border: none;
+#submit {
   border-radius: .25rem;
-  color: #4a4a4a;
+  background-color: #E6e27b;
+  color: #80202B;
 }
 
-.gold-border {
-  background-color: white;
-  width: 40rem;
-  align-items: center;
-  border: solid 10px #E6e27b;
-
+select {
+  -webkit-appearance: menulist-button;
+  appearance: menulist-button;
+  display: inline-block;
+  font-family: 'Krungthep', sans-serif;
+  color: #80202B;
+  background: #E6e27b;
+  border-radius: .25rem;
 }
 
-.parent-container {
-  background-color: #80202B;
-  display: grid;
-  grid-template-areas:
-    "top-flash your-news your-news"
-    "top-flash your-sports your-sports";
-  grid-row-gap: .25rem;
-}
-
-.card, .row {
- border: solid black .25em;
- margin: 2rem;
-}
-
-
-
-.card-img-top {
-  margin-bottom: 1rem;
-}
-
-.row {
-  background-color: white;
-  border: solid #E6e27b .35rem;
-  margin: 1rem;
-}
 
 .top-flash {
-  grid-area: top-flash;
+  text-align: center;
 }
 
-.your-news {
-  grid-area: your-news;
-
-}
-.your-sports {
-  grid-area: your-sports;
+.top-flash-card-body {
+  padding: .5rem;
+  border: #4a4a4a solid .5em;
 }
 
-.your-news h3 {
-  color: #80202B;
-  padding-top: 1em;
+.card-title {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 700;
 }
 
-.your-sports h3 {
-  color: #80202B;
-  padding-top: 1em;
+.card-text {
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-form {
-  margin: 2px;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.continue-button {
+  padding-left: 40%;
 }
 
+h3 {
+  font-size: 1rem;
+}
