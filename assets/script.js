@@ -26,6 +26,9 @@ function newscatcherAPI() {
       topFlashHeadline.innerHTML = response.articles[index].title;
       topFlashSource.innerHTML = response.articles[index].clean_url;
       topFlashAbstract.innerHTML = response.articles[index].summary;
+      topFlash.addEventListener("click", function(){
+          window.open(response.articles[index].link, "_blank")
+      })
     })
     .catch((err) => {
       console.error(err);
