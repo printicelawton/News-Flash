@@ -1,0 +1,81 @@
+body {
+  background-color: #80202B;
+  color: #4a4a4a;
+}
+
+h1 {
+  display: inline-flex;
+  background-color: #80202B;
+    color: #E6e27b;
+    font-family: 'Krungthep', sans-serif;
+    font-size: 7rem;
+    margin: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 50%;
+  width: 60rem;
+  background-color: white;
+  box-shadow: 0 5px 10px black;
+  border: #E6e27b solid 1rem;
+  border-radius: 5px;
+  padding: 5rem;
+}
+
+form {
+  padding: .75rem;
+  background-color: #80202B;
+  color: #E6e27b;
+  font-family: 'Krungthep', sans-serif;
+  justify-items: center;
+  box-shadow: 0 5px 10px black;
+}
+
+#submit {
+  border-radius: .25rem;
+  background-color: #E6e27b;
+  color: #80202B;
+}
+
+select {
+  -webkit-appearance: menulist-button;
+  appearance: menulist-button;
+  display: inline-block;
+  font-family: 'Krungthep', sans-serif;
+  color: #80202B;
+  background: #E6e27b;
+  border-radius: .25rem;
+}
+
+
+.top-flash {
+  text-align: center;
+}
+
+.top-flash-card-body {
+  padding: .5rem;
+  border: #4a4a4a solid .5em;
+}
+
+.card-title {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 700;
+}
+
+.card-text {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.continue-button {
+  padding-left: 40%;
+}
+
+h3 {
+  font-size: 1rem;
+}

@@ -1,14 +1,56 @@
-//   NY Times API Key = eotEjLHYnnth5tmNvCO16GEf0pwkAoI0  our app id = 7d9e7f1b-850f-47b5-b521-8bbf7ebf162c
+var news = document.getElementById("top-flash");
+var categoryChoice = document.getElementById("category");
 
-//  NY Times Most Popular call 
-// https://api.nytimes.com/svc/mostpopular/v2/viewed/1.json?api-key=eotEjLHYnnth5tmNvCO16GEf0pwkAoI0
+var index = 0;
 
-// NY Times top stories (by topic, others are available.  See https://developer.nytimes.com/docs/top-stories-product/1/overview)
-// https://api.nytimes.com/svc/topstories/v2/arts.json?api-key=eotEjLHYnnth5tmNvCO16GEf0pwkAoI0
-// https://api.nytimes.com/svc/topstories/v2/home.json?api-key=eotEjLHYnnth5tmNvCO16GEf0pwkAoI0
-// https://api.nytimes.com/svc/topstories/v2/science.json?api-key=eotEjLHYnnth5tmNvCO16GEf0pwkAoI0
-// https://api.nytimes.com/svc/topstories/v2/us.json?api-key=eotEjLHYnnth5tmNvCO16GEf0pwkAoI0
-// https://api.nytimes.com/svc/topstories/v2/world.json?api-key=eotEjLHYnnth5tmNvCO16GEf0pwkAoI0
+function newscatcherAPI() {
+  var categoryValue =
+    categoryChoice.options[categoryChoice.selectedIndex].value;
+    console.log(categoryChoice.options[categoryChoice.selectedIndex].value);
+  fetch(
+    "https://newscatcher.p.rapidapi.com/v1/search_free?q=" +
+      categoryValue +
+      "&lang=en&media=True",
+    {
+      method: "GET",
+      headers: {
+        "x-rapidapi-key": "4e65fa5d1fmshf86108e25761865p159b69jsn4aa46650c5be",
+        "x-rapidapi-host": "newscatcher.p.rapidapi.com",
+      },
+    }
+  )
+    .then((response) => response.json())
+    .then((response) => {
+      console.log(response);
+      topFlashPhoto.setAttribute("src", response.articles[index].media);
+      topFlashHeadline.innerHTML = response.articles[index].title;
+      topFlashSource.innerHTML = response.articles[index].clean_url;
+      topFlashAbstract.innerHTML = response.articles[index].summary;
+      topFlash.addEventListener("click", function(){
+          window.open(response.articles[index].link, "_blank")
+      })
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+}
 
-// NY Times News Wire (Others are available by topic.  See https://developer.nytimes.com/docs/timeswire-product/1/overview)
-// https://api.nytimes.com/svc/news/v3/content/all/all.json?api-key=eotEjLHYnnth5tmNvCO16GEf0pwkAoI0
+$("#submit").click(function (event) {
+  console.log("ive been clicked 1");
+  event.preventDefault();
+  $("section").show();
+  $("main").hide();
+  // call the function to load the stories
+  newscatcherAPI();
+  index++;
+});
+
+// submitBtn.addEventListener('click', function (event) {
+//   event.preventDefault();
+//   $('section').show();
+//   $('main').hide();
+//   // nyTimesTopStoriesAPI();
+//   newscatcherAPI();
+//   console.log('ive been clicked 1');
+//   // window.location = "newspage.html"
+// });
