@@ -1,152 +1,28 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  /* font-family: "Gotham Rounded", sans-serif; */
-}
-
-body {
-  /* background: linear-gradient(to right, rgb(155, 30, 26), rgb(255, 243, 173)); */
-  background-color: white;
-  color: #4a4a4a;
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-items: center; */
-  /* min-height: 50vh; */
-  /* margin: 0; */
-  /* padding: 0; */
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 50%;
-  width: 60rem;
+h1 {
+  color: #E6E27A;
+  text-align: center;
   background-color: #80202B;
-  box-shadow: 0 5px 10px black;
-  border-radius: 5px;
-  padding: 5rem;
+  padding: 20px;
+  font-family: 'Lexend', sans-serif;
+  font-weight: 400;
 }
 
-/* .content {
-  padding: 40px;
-  margin-top: 50px;
-} */
-
-.header {
-  color: #E6e27b;
-  font-family: 'Krungthep', sans-serif;
-  font-size: 5rem;
-  margin: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+.col-4.bg-light.border.border-dark {
+  padding-left: 40px;
 }
 
-/* h1 {
-  font-size: 20rem;
-} */
-
-h2, h3 {
-  font-family: 'Krungthep', sans-serif;
-}
-
-h5 {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-weight: 600;
-}
-
-p {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-.selections {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 10px;
-}
-
-.selections-container {
-  font-size: 3rem;
-  font-weight: bold;
-}
-
-.selections {
-  display: inline-block;
-}
-
-.btn-submit {
-  background-color: #E6e27b;
-  border: none;
-  border-radius: .25rem;
-  color: #4a4a4a;
-}
-
-.gold-border {
-  background-color: white;
-  width: 40rem;
-  align-items: center;
-  border: solid 10px #E6e27b;
-
-}
-
-.parent-container {
-  background-color: #80202B;
-  display: grid;
-  grid-template-areas:
-    "top-flash your-news your-news"
-    "top-flash your-sports your-sports";
-  grid-row-gap: .25rem;
-}
-
-.card, .row {
- border: solid black .25em;
- margin: 2rem;
-}
-
-
-
-.card-img-top {
-  margin-bottom: 1rem;
-}
-
-.row {
-  background-color: white;
-  border: solid #E6e27b .35rem;
-  margin: 1rem;
+.col-8 {
+  padding-right: 40px;
 }
 
 .top-flash {
-  grid-area: top-flash;
+  text-align: center;
 }
 
-.your-news {
-  grid-area: your-news;
-
-}
-.your-sports {
-  grid-area: your-sports;
+.continue-button {
+  padding-left: 40%;
 }
 
-.your-news h3 {
-  color: #80202B;
-  padding-top: 1em;
+h12 {
+  font-size: 13px;
 }
-
-.your-sports h3 {
-  color: #80202B;
-  padding-top: 1em;
-}
-
-form {
-  margin: 2px;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
