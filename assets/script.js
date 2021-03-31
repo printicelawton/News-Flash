@@ -44,9 +44,4 @@ $("#submit").click(function (event) {
   newscatcherAPI();
   
 });
-// displays current date with clock
-setInterval(function(){
-  var date = moment().format('MMMM Do YYYY, h:mm:ss a');
-  showCurrentDay.textContent = date;
-});
 
