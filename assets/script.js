@@ -35,22 +35,13 @@ function newscatcherAPI() {
     });
 }
 
+
 $("#submit").click(function (event) {
   console.log("ive been clicked 1");
   event.preventDefault();
   $("section").show();
   $("main").hide();
-  // call the function to load the stories
   newscatcherAPI();
-  index++;
+  
 });
 
-// submitBtn.addEventListener('click', function (event) {
-//   event.preventDefault();
-//   $('section').show();
-//   $('main').hide();
-//   // nyTimesTopStoriesAPI();
-//   newscatcherAPI();
-//   console.log('ive been clicked 1');
-//   // window.location = "newspage.html"
-// });
