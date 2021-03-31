@@ -44,13 +44,9 @@ $("#submit").click(function (event) {
   newscatcherAPI();
   index++;
 });
+// displays current date with clock
+setInterval(function(){
+  var date = moment().format('MMMM Do YYYY, h:mm:ss a');
+  showCurrentDay.textContent = date;
+});
 
-// submitBtn.addEventListener('click', function (event) {
-//   event.preventDefault();
-//   $('section').show();
-//   $('main').hide();
-//   // nyTimesTopStoriesAPI();
-//   newscatcherAPI();
-//   console.log('ive been clicked 1');
-//   // window.location = "newspage.html"
-// });
