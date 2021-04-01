@@ -59,6 +59,7 @@ $("#submit").click(function (event) {
   event.preventDefault();
   $("section").show();
   $("main").hide();
+  $(".card").attr("style", "border: #4a4a4a solid .25em;");
 });
 // displays current date with clock
 setInterval(function(){
