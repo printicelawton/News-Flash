@@ -50,6 +50,12 @@ form {
   color: #80202B;
 }
 
+#refresh {
+  border-radius: .25rem;
+  background-color: #E6e27b;
+  color: #80202B;
+}
+
 select {
   -webkit-appearance: menulist-button;
   appearance: menulist-button;
