@@ -35,7 +35,8 @@ function getNews() {
       topFlashHeadline.innerHTML = response.articles[index].title;
       topFlashSource.innerHTML = response.articles[index].clean_url;
       topFlashAbstract.innerHTML = response.articles[index].summary;
-    // Adds click function to card to open story in new window   
+    // Adds click function to card to open story in new window  
+      
       topFlash.addEventListener("click", function(){
           window.open(response.articles[index].link, "_blank")
       })  
@@ -59,7 +60,7 @@ $("#submit").click(function (event) {
   event.preventDefault();
   $("section").show();
   $("main").hide();
-  $(".card").attr("style", "border: #4a4a4a solid .25em;");
+  $(".card").attr("style", "border: #4a4a4a solid .25em; width: border-box; cursor: pointer;");
 });
 // displays current date with clock
 setInterval(function(){
