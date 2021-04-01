@@ -34,6 +34,8 @@ h1 {
   margin: 3rem;
 }
 
+#issMap { height: 180px; };
+
 form {
   margin-top: 2rem;
   padding: .75rem;

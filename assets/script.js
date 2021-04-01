@@ -54,45 +54,45 @@ function getNews() {
 }
 //ISS API Begins 
 
-//const mymap = L.map('issMap').setView([0, 0], 1);
+const mymap = L.map('issMap').setView([0, 0], 1);
 
-        //from openstreet maps... required attribution 
-        //const attribution = 
-        //'&copy; <a href="https://www.openstreetmap.org/copyright".OpenStreetMap</a> contributors';
-        //const tileUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';    
-        //const tiles = L.tileLayer(tileUrl, { attribution });
-        //tiles.addTo(mymap);    
+        from openstreet maps... required attribution 
+        const attribution = 
+        '&copy; <a href="https://www.openstreetmap.org/copyright".OpenStreetMap</a> contributors';
+        const tileUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';    
+        const tiles = L.tileLayer(tileUrl, { attribution });
+        tiles.addTo(mymap);    
 
-        //Fetch API using Asnyc/Wait method
-        //const api_ISS_Url = 'https://api.wheretheiss.at/v1/satellites/25544'
+        Fetch API using Asnyc/Wait method
+        const api_ISS_Url = 'https://api.wheretheiss.at/v1/satellites/25544'
         
-        //async function getISS () {
-        //const response = await fetch(api_ISS_Url);
-        //const data = await response.json ();
-        //const { latitude, longitude } = data;
+        async function getISS () {
+        const response = await fetch(api_ISS_Url);
+        const data = await response.json ();
+        const { latitude, longitude } = data;
 
-        //console.log(data);
-        //console.log(data.longitude)
+        console.log(data);
+        console.log(data.longitude)
 
-        //making it display window??
-        //L.marker([latitude,longitude]).addTo(mymap);
-        //getting the page to load with the map centered
-        //mymap.setView([latitude,longitude], 2.5);
-        //document.getElementById('lat').textContent = latitude;
-        //document.getElementById('long').textContent = longitude;
+        making it display window??
+        L.marker([latitude,longitude]).addTo(mymap);
+        getting the page to load with the map centered
+        mymap.setView([latitude,longitude], 2.5);
+        document.getElementById('lat').textContent = latitude;
+        document.getElementById('long').textContent = longitude;
 
         
    
   
-//}
+}
 
 //getISS();
 
 //Set ISS Map to only show when Science or Technology is selected 
-//var issLocatorStatus = document.getElementById("issMap")
-  //  if (categoryValue === "science" || categoryValue === "technology" || categoryValue ==="beauty")
-    //{issLocatorStatus.style.display = "block"} 
-    //else {issLocatorStatus.style.display = "none"};
+var issLocatorStatus = document.getElementById("issMap")
+   if (categoryValue === "science" || categoryValue === "technology" || categoryValue ==="beauty")
+    {issLocatorStatus.style.display = "block"} 
+    else {issLocatorStatus.style.display = "none"};
 
 
 // sets news category value from user selection in dropdown menu on click
