@@ -25,10 +25,17 @@ h1 {
   box-shadow: 0 5px 10px black;
   border: #E6e27b solid 1rem;
   border-radius: 5px;
-  padding: 5rem;
+  padding: 3rem;
+}
+
+#showCurrentDay {
+  font-family: 'Krungthep', sans-serif;
+  font-size: 1.5rem;
+  margin: 3rem;
 }
 
 form {
+  margin-top: 2rem;
   padding: .75rem;
   background-color: #80202B;
   color: #E6e27b;
@@ -60,7 +67,6 @@ select {
 
 .top-flash-card-body {
   padding: .5rem;
-  border: #4a4a4a solid .5em;
 }
 
 .card-title {
@@ -78,4 +84,14 @@ select {
 
 h3 {
   font-size: 1rem;
+}
+
+footer {
+  display: inline-flexbox;
+  margin: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+.tradingview-widget-container {
+  box-shadow: 0 5px 10px black;
 }
