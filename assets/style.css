@@ -103,3 +103,35 @@ footer {
 .tradingview-widget-container {
   box-shadow: 0 5px 10px black;
 }
+
+
+
+#header {
+  width: 100%;
+  text-align: center;  
+  background-color: rgb(58, 58, 65);
+  padding: 10px;
+  color: white;  
+}
+
+#searchBtn {
+    background-color: rgb(56, 141, 238);
+}
+
+#currentWeatherBlock {
+    margin-top: 30px;
+}
+
+#showCurrentIcon {
+    background-color: rgb(56, 141, 238);
+}
+
+.forecastBlock {
+    background-color: rgb(56, 141, 238);
+    color: white;  
+    padding: 10px;
+}
+
+.body {
+    padding: 10px;
+}

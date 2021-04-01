@@ -69,9 +69,38 @@
     </div>
 </body>
 
-<footer class="row col-lg-12">
+<!-- shows weather for searched city when news travel category is selected -->
+<div id="weatherAPI">
+    <div class="row">
+        <div class="col-md-3">
+            <h6>Check the weather:</h6>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" id="citySearch">
+                <button class="btn btn-outline-secondary" type="button" id="searchBtn">&#x1F50D;</button>
+        </div>
+    </div>
+              
+    <!-- displays, location, date and current weather data -->
+      <div class="col-md-9">
+          <div class="row">
+              <div class="col-md-1">
+                  <h3 id="showCity"></h3>
+                  <img id="showCurrentIcon"></img>
+              </div>                  
+          </div>
+      
+          <div class="col-md-2">
+            <h6 id="showCurrentTemp"></h6>
+            <h6 id="showCurrentHumid"></h6>
+            <h6 id="showCurrentWind"></h6>
+            <h6 id="showCurrentUv"></h6>
+          </div>                                
+      </div>                  
+    </div>
+</div>
 
-<!-- TradingView Widget BEGIN -->
+<!-- stock market widget -->
+<footer class="row col-lg-12">
 <div class="tradingview-widget-container" id="tradingWidget">
     <div class="tradingview-widget-container__widget"></div>
     <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/markets/" rel="noopener" target="_blank"><span class="blue-text">Financial Markets</span></a> by TradingView</div>
@@ -133,9 +162,12 @@
     ]
   }
 </script>
-  </div>
-  <!-- TradingView Widget END -->
-    </footer>
+  </div>  
+</footer>
+
+
+
+
 
     
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
