@@ -7,7 +7,6 @@ var categoryValue = localStorage.getItem("categoryValueStorage");
 if (categoryValue) {
   getNews();
 }
-
 // API call to newscatcher, includes user selected news category value
 function getNews() {
   fetch(

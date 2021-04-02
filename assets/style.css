@@ -112,7 +112,6 @@ footer {
 }
 
 #searchBtn {
-<<<<<<< HEAD
   background-color: rgb(56, 141, 238);
 }
 #currentWeatherBlock {
@@ -125,31 +124,14 @@ footer {
   background-color: rgb(56, 141, 238);
   color: white;
   padding: 1rem;
-=======
-    background-color: #80202B;
-}
-
-.currentWeatherBlock {
-    margin-top: 1rem;
-}
-#showCurrentIcon {
-    background-color: none;
-    width: 4rem;
->>>>>>> 9ba7b627fb02ea8a53e804c271af3c3bb6d5aa82
 }
 
 .body {
   padding: 1rem;
 }
 
-<<<<<<< HEAD
 #weathBox {
   margin-left: 5rem;
-=======
- #weathBox {
-  margin-left: 4rem;
-  margin-top: 1rem;
->>>>>>> 9ba7b627fb02ea8a53e804c271af3c3bb6d5aa82
 }
 @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
   h1 {
