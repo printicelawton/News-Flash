@@ -60,9 +60,6 @@ select {
   border-radius: .25rem;
 }
 
-/* .card {
-  border: #4a4a4a solid .25em;
-} */
 
 .top-flash {
   text-align: center;
@@ -117,18 +114,15 @@ footer {
 #searchBtn {
     background-color: #80202B;
 }
-#currentWeatherBlock {
+
+.currentWeatherBlock {
     margin-top: 1rem;
 }
 #showCurrentIcon {
     background-color: none;
     width: 4rem;
 }
-/* .forecastBlock {
-    background-color: rgb(56, 141, 238);
-    color: white;  
-    padding: 1rem; */
-}
+
 .body {
     padding: 1rem;
 }
