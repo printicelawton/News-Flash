@@ -153,3 +153,9 @@ footer {
         padding: .25rem;
       }
     }
+
+
+    #issMap {
+      height: 250px;
+      width: 100%;
+    }
