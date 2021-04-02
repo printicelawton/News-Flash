@@ -3,7 +3,6 @@ var categoryChoice = document.getElementById("category");
 var index = Math.floor(Math.random() * 50);
 var categoryValue = localStorage.getItem("categoryValueStorage");
 
-
 // if user selected category is present in local storage, gets news with parameter from local storage
 if (categoryValue) {
   getNews();
@@ -30,33 +29,26 @@ function getNews() {
     .then((response) => response.json())
     .then((response) => {
       console.log(response);
-      
+
       topFlashHeadline.innerHTML = response.articles[index].title;
       topFlashSource.innerHTML = response.articles[index].clean_url;
       topFlashAbstract.innerHTML = response.articles[index].summary;
-<<<<<<< HEAD
-      // Adds click function to card to open story in new window
 
-      topFlash.addEventListener("click", function () {
-        window.open(response.articles[index].link, "_blank");
-      });
-=======
-
-      // presents image from api response, if image is present.  otherwise, a "now image" icon appears   
+      // presents image from api response, if image is present.  otherwise, a "now image" icon appears
       if (response.articles[index].media) {
         topFlashPhoto.setAttribute("src", response.articles[index].media);
       }
 
-      // Adds click function to card to open story in new window  
-      topFlash.addEventListener("click", function(){
-          window.open(response.articles[index].link, "_blank")
-      })  
->>>>>>> 70ce8e3a878206234e1f6e51684382609a344e54
+      // Adds click function to card to open story in new window
+      topFlash.addEventListener("click", function () {
+        window.open(response.articles[index].link, "_blank");
+      });
     })
     .catch((err) => {
       console.error(err);
     });
 
+  // presents stock widget when news category is business, economics or finance
   var stockWidgetStatus = document.getElementById("tradingWidget");
   if (
     categoryValue === "business" ||
@@ -68,6 +60,7 @@ function getNews() {
     stockWidgetStatus.style.display = "none";
   }
 
+  // presents weather widget when news category is travel
   var weatherStatus = document.getElementById("weatherAPI");
   if (categoryValue === "travel") {
     weatherStatus.style.display = "block";
@@ -96,13 +89,8 @@ $("#refresh").click(function () {
 });
 
 // displays current date with clock
-<<<<<<< HEAD
 setInterval(function () {
-  var date = moment().format("MMMM Do YYYY, h:mm:ss a");
-=======
-setInterval(function(){
-  var date = moment().format('MMMM Do YYYY, h:mm a');
->>>>>>> 70ce8e3a878206234e1f6e51684382609a344e54
+  var date = moment().format("MMMM Do YYYY, h:mm a");
   showCurrentDay.textContent = date;
 });
 

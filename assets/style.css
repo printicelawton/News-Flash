@@ -1,18 +1,18 @@
 body {
-  background-color: #80202B;
+  background-color: #80202b;
   color: #4a4a4a;
 }
 
 h1 {
   display: inline-flexbox;
-  background-color: #80202B;
-    color: #E6e27b;
-    font-family: 'Krungthep', sans-serif;
-    font-size: 7rem;
-    margin: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
+  background-color: #80202b;
+  color: #e6e27b;
+  font-family: "Krungthep", sans-serif;
+  font-size: 7rem;
+  margin: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
 
 .container {
@@ -23,41 +23,41 @@ h1 {
   width: 60rem;
   background-color: white;
   box-shadow: 0 5px 10px black;
-  border: #E6e27b solid 1rem;
+  border: #e6e27b solid 1rem;
   border-radius: 5px;
   padding: 3rem;
 }
 
 #showCurrentDay {
-  font-family: 'Krungthep', sans-serif;
+  font-family: "Krungthep", sans-serif;
   font-size: 1.5rem;
   margin: 3rem;
 }
 
 form {
   margin-top: 2rem;
-  padding: .75rem;
-  background-color: #80202B;
-  color: #E6e27b;
-  font-family: 'Krungthep', sans-serif;
+  padding: 0.75rem;
+  background-color: #80202b;
+  color: #e6e27b;
+  font-family: "Krungthep", sans-serif;
   justify-items: center;
   box-shadow: 0 5px 10px black;
 }
 
 #submit {
-  border-radius: .25rem;
-  background-color: #E6e27b;
-  color: #80202B;
+  border-radius: 0.25rem;
+  background-color: #e6e27b;
+  color: #80202b;
 }
 
 select {
   -webkit-appearance: menulist-button;
   appearance: menulist-button;
   display: inline-block;
-  font-family: 'Krungthep', sans-serif;
-  color: #80202B;
-  background: #E6e27b;
-  border-radius: .25rem;
+  font-family: "Krungthep", sans-serif;
+  color: #80202b;
+  background: #e6e27b;
+  border-radius: 0.25rem;
 }
 
 /* .card {
@@ -69,22 +69,22 @@ select {
 }
 
 .top-flash-card-body {
-  padding: .5rem;
+  padding: 0.5rem;
 }
 
 .card-title {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-weight: 700;
 }
 
 .card-text {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 #refresh {
-  background-color: #E6e27b;
-  border-radius: .25rem;
-  color: #80202B;
+  background-color: #e6e27b;
+  border-radius: 0.25rem;
+  color: #80202b;
 }
 
 h3 {
@@ -112,44 +112,41 @@ footer {
 }
 
 #searchBtn {
-    background-color: rgb(56, 141, 238);
+  background-color: rgb(56, 141, 238);
 }
 #currentWeatherBlock {
-    margin-top: 1rem;
+  margin-top: 1rem;
 }
 #showCurrentIcon {
-    background-color: rgb(56, 141, 238);
+  background-color: rgb(56, 141, 238);
 }
 .forecastBlock {
-    background-color: rgb(56, 141, 238);
-    color: white;  
-    padding: 1rem;
+  background-color: rgb(56, 141, 238);
+  color: white;
+  padding: 1rem;
 }
 .body {
-    padding: 1rem;
+  padding: 1rem;
 }
 
- #weathBox {
+#weathBox {
   margin-left: 5rem;
 }
-@media only screen 
-    and (device-width : 375px) 
-    and (device-height : 812px) 
-    and (-webkit-device-pixel-ratio : 3) {
-      h1 {
-        font-size: 3rem;
-      }
-      #showCurrentDay {
-        font-size: .65rem;
-      }
-      #weathBox {
-        margin-left: 0rem;
-      }
-      .container {
-        max-width: 20rem;
-        padding: 1rem;
-      }
-      .top-flash-card-body {
-        padding: .25rem;
-      }
-    }
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+  h1 {
+    font-size: 3rem;
+  }
+  #showCurrentDay {
+    font-size: 0.65rem;
+  }
+  #weathBox {
+    margin-left: 0rem;
+  }
+  .container {
+    max-width: 20rem;
+    padding: 1rem;
+  }
+  .top-flash-card-body {
+    padding: 0.25rem;
+  }
+}
