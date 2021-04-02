@@ -60,9 +60,6 @@ select {
   border-radius: .25rem;
 }
 
-/* .card {
-  border: #4a4a4a solid .25em;
-} */
 
 .top-flash {
   text-align: center;
@@ -79,6 +76,7 @@ select {
 
 .card-text {
   font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.25rem;
 }
 
 #refresh {
@@ -107,30 +105,32 @@ footer {
   margin: 3rem;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: #80202B;
+  background-color: #E6e27b;
   padding: 1rem;
+  font-family: 'Krungthep', sans-serif;
+  font-size: 2rem;
 }
 
 #searchBtn {
-    background-color: rgb(56, 141, 238);
+    background-color: #80202B;
 }
-#currentWeatherBlock {
+
+.currentWeatherBlock {
     margin-top: 1rem;
 }
 #showCurrentIcon {
-    background-color: rgb(56, 141, 238);
+    background-color: none;
+    width: 4rem;
 }
-.forecastBlock {
-    background-color: rgb(56, 141, 238);
-    color: white;  
-    padding: 1rem;
-}
+
 .body {
     padding: 1rem;
 }
 
  #weathBox {
-  margin-left: 5rem;
+  margin-left: 4rem;
+  margin-top: 1rem;
 }
 @media only screen 
     and (device-width : 375px) 
