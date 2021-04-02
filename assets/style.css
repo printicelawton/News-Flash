@@ -104,7 +104,14 @@ footer {
   box-shadow: 0 5px 10px black;
 }
 
-
+#weatherAPI {
+  width: 50%;
+  display: inline-flexbox;
+  margin: 3rem;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
 
 #header {
   width: 100%;
