@@ -78,7 +78,7 @@ $("#refresh").click(function () {
 
 // displays current date with clock
 setInterval(function(){
-  var date = moment().format('MMMM Do YYYY, h:mm:ss a');
+  var date = moment().format('MMMM Do YYYY, h:mm a');
   showCurrentDay.textContent = date;
 });
 
