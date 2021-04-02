@@ -60,9 +60,6 @@ select {
   border-radius: 0.25rem;
 }
 
-/* .card {
-  border: #4a4a4a solid .25em;
-} */
 
 .top-flash {
   text-align: center;
@@ -107,11 +104,15 @@ footer {
   margin: 3rem;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: #80202B;
+  background-color: #E6e27b;
   padding: 1rem;
+  font-family: 'Krungthep', sans-serif;
+  font-size: 2rem;
 }
 
 #searchBtn {
+<<<<<<< HEAD
   background-color: rgb(56, 141, 238);
 }
 #currentWeatherBlock {
@@ -124,13 +125,31 @@ footer {
   background-color: rgb(56, 141, 238);
   color: white;
   padding: 1rem;
+=======
+    background-color: #80202B;
 }
+
+.currentWeatherBlock {
+    margin-top: 1rem;
+}
+#showCurrentIcon {
+    background-color: none;
+    width: 4rem;
+>>>>>>> 9ba7b627fb02ea8a53e804c271af3c3bb6d5aa82
+}
+
 .body {
   padding: 1rem;
 }
 
+<<<<<<< HEAD
 #weathBox {
   margin-left: 5rem;
+=======
+ #weathBox {
+  margin-left: 4rem;
+  margin-top: 1rem;
+>>>>>>> 9ba7b627fb02ea8a53e804c271af3c3bb6d5aa82
 }
 @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
   h1 {
