@@ -6,19 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News Flash</title>
 
+    <!-- leaflet style sheet for map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+    <!-- JS script for dynamically populating where the ISS is located -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+       <!-- Font Awesome -->
+       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
     <!-- custom stylesheet -->
     <link rel="stylesheet" href="assets/style.css">
+    <!-- ISS fetch javascript -->
+    <script src="assets/iss_script.js"></script>
 </head>
 
 <body>
     <h1 class="header">
         NEWS<i class="fas fa-bolt"></i>FLASH</h1>
     <div class="container column-sm-12">
+      
+      <!-- ISS Map with Long and Lat -->
+      <h2>Where is the International Space Station?</h2>
+
+      <p>Latitude: <span id="lat"></span><br /></p>
+      <p>Longitude: <span id="long"></span><br /></p> 
+  
+      <div id="issMap"></div>
+
       
         <div class="column-sm-12">
            <span id="showCurrentDay"></span>
