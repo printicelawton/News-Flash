@@ -25,7 +25,6 @@ function getNews() {
       },
     }
   )
-
 //   presents data from API call to page
     .then((response) => response.json())
     .then((response) => {
