@@ -107,30 +107,35 @@ footer {
   margin: 3rem;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: #80202B;
+  background-color: #E6e27b;
   padding: 1rem;
+  font-family: 'Krungthep', sans-serif;
+  font-size: 2rem;
 }
 
 #searchBtn {
-    background-color: rgb(56, 141, 238);
+    background-color: #80202B;
 }
 #currentWeatherBlock {
     margin-top: 1rem;
 }
 #showCurrentIcon {
-    background-color: rgb(56, 141, 238);
+    background-color: none;
+    width: 4rem;
 }
-.forecastBlock {
+/* .forecastBlock {
     background-color: rgb(56, 141, 238);
     color: white;  
-    padding: 1rem;
+    padding: 1rem; */
 }
 .body {
     padding: 1rem;
 }
 
  #weathBox {
-  margin-left: 5rem;
+  margin-left: 4rem;
+  margin-top: 1rem;
 }
 @media only screen 
     and (device-width : 375px) 
