@@ -3,12 +3,10 @@ var categoryChoice = document.getElementById("category");
 var index = Math.floor(Math.random() * 50);  
 var categoryValue = localStorage.getItem("categoryValueStorage");
 
-
 // if user selected category is present in local storage, gets news with parameter from local storage
 if(categoryValue) {
-  getNews()
+  getNews();
 }
-
 // API call to newscatcher, includes user selected news category value
 function getNews() {
   fetch(
@@ -27,7 +25,6 @@ function getNews() {
       },
     }
   )
-
 //   presents data from API call to page
     .then((response) => response.json())
     .then((response) => {
@@ -45,7 +42,9 @@ function getNews() {
       // Adds click function to card to open story in new window  
       topFlash.addEventListener("click", function(){
           window.open(response.articles[index].link, "_blank")
-      })  
+      })
+      $(".card").attr("style", "border: #4a4a4a solid .25em; width: border-box; cursor: pointer;");
+      $("select option[value='" + categoryValue + "']").attr('selected', 'selected');
     })
     .catch((err) => {
       console.error(err);
@@ -71,24 +70,17 @@ $("#submit").click(function (event) {
   localStorage.setItem("categoryValueStorage", categoryValue);
   getNews();
   event.preventDefault();
-  $("section").show();
-  $("main").hide();
-  $(".card").attr("style", "border: #4a4a4a solid .25em; width: border-box; cursor: pointer;");
 });
 
 // reloads page with a news story when show new story is clicked
 $("#refresh").click(function () {
   location.reload()
 }); 
-
-
 // displays current date with clock
 setInterval(function(){
   var date = moment().format('MMMM Do YYYY, h:mm a');
   showCurrentDay.textContent = date;
 });
-
-
 
 // provides weather for display when travel category is selected
 // current weather variables
@@ -170,11 +162,11 @@ function getWeather() {
     
       //  determines uv index display background color
     if (currentUv < 3) {
-      document.getElementById("showCurrentUv").setAttribute("style","background-color: rgb(37, 200, 37)");
+      document.getElementById("showCurrentUv").setAttribute("style","background-color: rgb(37, 200, 37); padding: .5rem; border-radius: .25rem; color: white;");
     } else if (currentUv < 6) {
-      document.getElementById("showCurrentUv").setAttribute("style","background-color: yellow");
+      document.getElementById("showCurrentUv").setAttribute("style","background-color: yellow; padding: .5rem; border-radius: .25rem; color: black;");
     } else {
-      document.getElementById("showCurrentUv").setAttribute("style","background-color: red");
+      document.getElementById("showCurrentUv").setAttribute("style","background-color: red; padding: .5rem; border-radius: .25rem; color: white;");
     };
    });
   });
