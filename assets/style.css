@@ -132,6 +132,26 @@ footer {
   margin-left: 4rem;
   margin-top: 1rem;
 }
+
+#issMapControl {
+  margin-top: 2rem;
+  border: #E6e27b solid .5rem;
+  font-family: 'Krungthep', sans-serif;
+  background-color: #E6e27b;
+  box-shadow: 0 5px 10px black;
+  color: #80202B;
+  text-align: center;
+}
+
+#issMap {
+  height: 250px;
+  width: 100%;
+  border: #80202B solid .25rem;
+}
+
+#lat, #long {
+  
+}
 @media only screen 
     and (device-width : 375px) 
     and (device-height : 812px) 
@@ -154,8 +174,3 @@ footer {
       }
     }
 
-
-    #issMap {
-      height: 250px;
-      width: 100%;
-    }

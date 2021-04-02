@@ -211,13 +211,3 @@ async function getISS () {
 }
 
 getISS();
-
-
-
-
-  
-
-
-
-
-
