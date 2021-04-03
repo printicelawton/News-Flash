@@ -34,5 +34,10 @@ https://github.com/Xr7TSi
 Abraham Kim
 https://github.com/Kimsabraham
 
+<<<<<<< HEAD
 URL: https://xr7tsi.github.io/News-Flash/
 Github Repo: https://github.com/Xr7TSi/News-Flash
+=======
+
+.
+>>>>>>> 3eaf51f6f861e66f677b64bea1ec80751e57421d
